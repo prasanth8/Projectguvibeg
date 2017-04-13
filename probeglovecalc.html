@@ -1,0 +1,45 @@
+<html>
+<style>
+h1{
+color:red;
+font-style:italic;
+font-size:40px;
+}
+.gtext{
+font-style:bold;
+font-color:blue;
+font-size:25px;
+}
+body{
+background-image:url("images.png"),url("hand.jpg"),url("download.png");
+background-repeat:no-repeat,no-repeat,no-repeat;
+background-position:left top,right top,center center;
+
+}
+</style>
+<body>
+<center><h1>Love Calculator</h1>
+<script type="text/javascript">
+alert("I think your name will get more percentage"); 
+function calc(){
+var valu=0,len;
+var name1=document.form1.id1.value;
+var name2=document.form1.id2.value;
+var len=name1.length+name2.length;
+for(var i=0;i<name1.length;i++){
+for(var j=0;j<name2.length;j++){
+if(name1[i]==name2[j]){
+valu+=2;;
+break;
+}
+}}
+alert(len-valu);
+}
+</script>
+<form name="form1" class=gtext>
+<center>Enter the First Name:<input type="text" id="id1"/>
+<center>Enter the Second Name:<input type="text" id="id2"/> 
+<center><input type="button" onclick="calc()" value="click"/>
+</form>
+</body>
+</html>
